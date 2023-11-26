@@ -24,14 +24,16 @@ repositories {
 }
 
 dependencies {
-/*
+
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-		runtimeOnly 'com.mysql:mysql-connector-j'
+	implementation 'mysql:mysql-connector-java:8.0.26'
+	// runtimeOnly 'com.mysql:mysql-connector-j'
+		/*
 			  // 시큐리티 태그 라이브러리
     implementation 'org.springframework.security:spring-security-taglibs'
 
     // JSP 템플릿 엔진
-    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+   
 
     // JSTL
     implementation 'javax.servlet:jstl'
@@ -40,6 +42,7 @@ dependencies {
     		implementation 'org.springframework.boot:spring-boot-starter-security'
     	
 	*/
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
