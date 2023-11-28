@@ -2,10 +2,9 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../layout/header.jsp" %>
 	<div class="container">
-<h2>User Login</h2>
-  <form action="/action_page.php">
+<h2>User Join</h2>
+  <form>
 
-    
         <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -17,14 +16,12 @@
       <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
     </div>
     
-    <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember"> Remember me
-      </label>
-    </div>
-    <button type="submit" class="btn btn-primary">로그인</button>
-  </form>
-	</div>
-	
 
+  </form>
+     <button id="btn-login" class="btn btn-primary">회원가입</button>
+	</div>
+	 
+
+<script src="/blog/js/user.js">
+</script>
 <%@ include file="../layout/footer.jsp" %>

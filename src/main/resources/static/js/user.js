@@ -3,12 +3,16 @@ let index = {
 		$('#btn-save').on("click", ()=>{
 			this.save();
 		});
+			$('#btn-login').on("click", ()=>{
+			this.login();
+		});
 	},
+	
 	
 	save: function(){
 		// alert('user의 save 함수 호출');
 		let data = {
-			user: $('#name').val(),
+			name: $('#name').val(),
 			password: $('#password').val(),
 			email: $('#email').val()
 		}
@@ -20,12 +24,36 @@ let index = {
 			contentType: "application/json;charset=utf-8", // body 데이터 타입
 			dataType:"json" // req 타입
 		}).done(function(res){
-			location.href="/blog";
+			// location.href="/blog";
+			console.log(res)
+		}).fail(function(error){
+			console.log(JSON.stringify(error));
+		}); // ajax 통신을 사용하여 3개의 파라미터를 json으로 변경하여 INSERT 요청 수행
+		
+	},
+		login: function(){
+		// alert('user의 save 함수 호출');
+		let data = {
+			password: $('#password').val(),
+			email: $('#email').val()
+		}
+		
+		$.ajax({
+			type: "POST",
+			url: "/blog/api/user/login",
+			data: JSON.stringify(data), // body 데이터
+			contentType: "application/json;charset=utf-8", // body 데이터 타입
+			dataType:"json" // req 타입
+		}).done(function(res){
+				console.log(res)
+				location.href="/blog";
 		}).fail(function(error){
 			console.log(JSON.stringify(error));
 		}); // ajax 통신을 사용하여 3개의 파라미터를 json으로 변경하여 INSERT 요청 수행
 		
 	}
+	
+	
 }
 
 index.init();

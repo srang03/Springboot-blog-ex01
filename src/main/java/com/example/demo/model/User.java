@@ -9,6 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
@@ -37,7 +38,8 @@ public class User {
 	@Enumerated(EnumType.STRING)
 	private RoleType role;
 	
-	@Column(nullable = false, length = 100)
+	
+	@Column(nullable = false, length = 100, unique = true)
 	private String email;
 	
 	@CreationTimestamp
