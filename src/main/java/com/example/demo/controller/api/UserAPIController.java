@@ -18,6 +18,9 @@ public class UserAPIController {
 	@Autowired
 	UserService service;
 
+	@Autowired
+	 HttpSession session;
+	
 	@PostMapping("/api/user")
 	public ResponseDTO<Integer> save(@RequestBody User user) {
 		System.out.println(user.getName());
@@ -26,7 +29,7 @@ public class UserAPIController {
 	}
 	
 	@PostMapping("/api/user/login")
-	public ResponseDTO<Integer> login(@RequestBody User user, HttpSession session){
+	public ResponseDTO<Integer> login(@RequestBody User user){
 		User principal = service.login(user);
 		System.out.println("service: " + user.getEmail());
 		System.out.println("service: " + user.getPassword());
