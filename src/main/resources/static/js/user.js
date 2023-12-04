@@ -19,7 +19,7 @@ let index = {
 		
 		$.ajax({
 			type: "POST",
-			url: "/blog/api/user",
+			url: "/api/user",
 			data: JSON.stringify(data), // body 데이터
 			contentType: "application/json;charset=utf-8", // body 데이터 타입
 			dataType:"json" // req 타입
@@ -40,13 +40,13 @@ let index = {
 		
 		$.ajax({
 			type: "POST",
-			url: "/blog/api/user/login",
+			url: "/api/user/login",
 			data: JSON.stringify(data), // body 데이터
 			contentType: "application/json;charset=utf-8", // body 데이터 타입
 			dataType:"json" // req 타입
 		}).done(function(res){
 				console.log(res)
-				location.href="/blog";
+				location.href="/";
 		}).fail(function(error){
 			console.log(JSON.stringify(error));
 		}); // ajax 통신을 사용하여 3개의 파라미터를 json으로 변경하여 INSERT 요청 수행
