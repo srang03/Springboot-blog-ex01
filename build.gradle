@@ -32,16 +32,10 @@ dependencies {
 			  // 시큐리티 태그 라이브러리
     implementation 'org.springframework.security:spring-security-taglibs'
  	testImplementation 'org.springframework.security:spring-security-test'
-    
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
   	implementation 'org.springframework.boot:spring-boot-starter-security'
-    // JSP 템플릿 엔진
-   /*
+ 
 
-    // JSTL
-
-   
-    	
-	*/
 	implementation 'javax.servlet:jstl'
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

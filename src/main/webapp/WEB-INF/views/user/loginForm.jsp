@@ -3,22 +3,31 @@
 <%@ include file="../layout/header.jsp" %>
 	<div class="container">
 <h2>User Join</h2>
-  <form>
+  <form action="#" method="post"> 
 
         <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" name="email">
     </div>
     
     
     <div class="form-group">
       <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+      <input type="password" name="password" class="form-control" id="password" placeholder="Enter password" name="password">
     </div>
     
-
-  </form>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+           <input type="checkbox" name="remember" class="form-check-input"> <span>Remember me</span>
+      </label>
+ 
+    </div>
+    
+       
+    
      <button id="btn-login" class="btn btn-primary">로그인</button>
+  </form>
+
 	</div>
 	 
 
